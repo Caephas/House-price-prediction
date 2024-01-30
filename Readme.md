@@ -53,7 +53,7 @@ The California housing dataset is used, which includes data on house prices and 
 
 - MLflow is used for experiment tracking, model logging, and model management.
 - The notebook demonstrates how to log metrics and models to MLflow and retrieve them for later use or deployment.
-- Model Deployment on GCP and Containerization with Docker Guide(<https://www.notion.so/End-to-End-Guide-to-ML-Model-Lifecycle-From-MLflow-Integration-to-Cloud-Deployment-9b00a04d71334e37bfe9924b5f0d1b9a?pvs=4>)
+- [End-to-End Guide to ML Model Lifecycle: From MLflow Integration to Cloud Deployment](https://www.notion.so/End-to-End-Guide-to-ML-Model-Lifecycle-From-MLflow-Integration-to-Cloud-Deployment-9b00a04d71334e37bfe9924b5f0d1b9a?pvs=4)
 
 ### Conclusion
 
