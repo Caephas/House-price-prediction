@@ -1,47 +1,60 @@
-### House Price Prediction using Machine Learning
-This project aims to build a machine learning model to predict house prices based on various features, using the California housing dataset. The model implemented in this project is the XGBoost Regressor from the XGBoost library.
+# California House Price Prediction Notebook
 
-Project Structure
-```
-.
-├── README.md
-├── housing_price_prediction.ipynb
+## Overview
 
-```
+This README provides a comprehensive overview of the California House Price Prediction notebook, which employs various Python libraries and machine learning techniques to predict house prices based on the California housing dataset.
 
-## Dataset
-The dataset used in this project is the California housing dataset, which is inbuilt in the sklearn library.
+### Dependencies
 
-## Dependencies
-Python
-NumPy
-Pandas
-Matplotlib
-Seaborn
-Scikit-learn
-XGBoost
+The notebook uses the following Python libraries:
 
-## Implementation
-The project follows these steps:
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- MLflow
+- Scikit-Learn
+- XGBoost
+- Requests
 
-1. Importing the required libraries.
-2. Importing the California housing dataset.
-3. Loading the dataset into a pandas DataFrame.
-4. Checking the number of rows and columns in the DataFrame, and performing basic data analysis.
-5. Understanding the correlation between various features in the dataset.
-6. Splitting the data into input features (X) and the target feature (Y), which is 'price'.
-7. Splitting the data into training and testing sets.
-8. Training the XGBoost Regressor model on the training data.
-9. Making predictions on the training data and evaluating the model.
-10. Making predictions on the test data and visualizing the predicted vs actual prices.
+### Dataset
 
-## Usage
+The California housing dataset is used, which includes data on house prices and other related features.
 
-Clone this repository to your local machine.
-Install the required dependencies.
-Open the Jupyter notebook: housing_price_prediction.ipynb.
-Run all cells in the notebook to train and evaluate the model.
-This notebook can be opened and executed in environments such as Google Colab, Jupyter Notebook, or Visual Studio Code which supports .ipynb files. It cannot be run directly from the terminal as it is in a Jupyter Notebook format.
+### Workflow
 
-## Results
-The model's performance is evaluated using R squared error and Mean Absolute Error on both training and testing data. Finally, a scatter plot visualizing the actual prices vs predicted prices is provided
+1. **Data Import**: The notebook begins by importing the necessary Python libraries and the California housing dataset.
+
+2. **Data Exploration and Preprocessing**:
+    - Load the data into a Pandas DataFrame.
+    - Perform initial data exploration, including checking for null values and understanding the data structure.
+    - Visualize the correlations between different features using a heatmap.
+
+3. **Data Splitting**: The dataset is split into training and testing sets.
+
+4. **Model Training**:
+    - An XGBoost Regressor model is trained on the data.
+    - MLflow is integrated for experiment tracking and model management.
+    - The model's performance is evaluated using metrics like mean squared error, mean absolute error, and R-squared.
+
+5. **Model Evaluation**:
+    - The model's predictions are compared against the actual prices for both training and testing datasets.
+    - A scatter plot is used to visualize the actual vs. predicted prices.
+
+6. **Model Persistence**:
+    - The trained model is saved using MLflow.
+    - Instructions are provided for loading and querying the saved model.
+
+7. **Model Deployment and Querying**:
+    - The notebook demonstrates how to serve the model locally and query it via a REST API.
+    - Additionally, it shows how to deploy the model to a cloud platform (GCP) and perform remote querying.
+
+### MLflow Integration
+
+- MLflow is used for experiment tracking, model logging, and model management.
+- The notebook demonstrates how to log metrics and models to MLflow and retrieve them for later use or deployment.
+- Model Deployment on GCP and Containerization with Docker Guide(<https://www.notion.so/End-to-End-Guide-to-ML-Model-Lifecycle-From-MLflow-Integration-to-Cloud-Deployment-9b00a04d71334e37bfe9924b5f0d1b9a?pvs=4>)
+
+### Conclusion
+
+This notebook provides a comprehensive guide to predicting California house prices using machine learning techniques, with a focus on XGBoost and MLflow for model training and management.
